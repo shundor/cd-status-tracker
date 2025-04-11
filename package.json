@@ -1,0 +1,15 @@
+{
+  "name": "cd-status-tracker",
+  "version": "1.0.0",
+  "description": "GitHub Action to emulate Bamboo's environment/version tracking.",
+  "main": "cd-status-tracker.js",
+  "scripts": {
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^5.1.1"
+  }
+}
