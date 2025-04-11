@@ -26,4 +26,4 @@ jobs:
         with:
           commit_message: "Update deployment status"
           file_pattern: .github/deployment-status.json
-          token: ${{ secrets.GH_TOKEN_SECRET }}
+          token: ${{ secrets.SECRET_TOKEN }}
