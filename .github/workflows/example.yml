@@ -20,11 +20,9 @@ jobs:
           environment: production
           version: ${{ github.sha }}
 
-      # Commit the deployment status file to the repository
+      # Commit the deployment status file using a GitHub Action
       - name: Commit deployment status
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add .github/deployment-status.json
-          git commit -m "Update deployment status"
-          git push
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Update deployment status"
+          file_pattern: .github/deployment-status.json
