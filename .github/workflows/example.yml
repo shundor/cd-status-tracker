@@ -1,0 +1,26 @@
+
+# .github/workflows/cd-status-tracker.yml
+name: Call CD Status Tracker Action
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  call-cd-status-tracker:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Call the custom action from cd-status-tracker
+      - name: Run CD Status Tracker
+        uses: shundor/cd-status-tracker@main
+        with:
+          # Pass any required inputs for the action here
+          input1: "value1"
+          input2: "value2"
