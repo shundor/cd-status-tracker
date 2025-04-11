@@ -1,0 +1,23 @@
+name: 'CD Status Tracker'
+description: 'Track and log deployment status per environment to mimic Bamboo-style visibility'
+author: 'Your Name <your.email@example.com>'
+inputs:
+  environment:
+    description: 'Deployment environment (e.g., staging, production)'
+    required: true
+  version:
+    description: 'Version or release identifier'
+    required: true
+  output-path:
+    description: 'File path to write the deployment status JSON'
+    required: false
+    default: '.github/deployment-status.json'
+outputs:
+  deployment-info:
+    description: 'JSON string of deployment metadata'
+runs:
+  using: 'node16'
+  main: 'cd-status-tracker.js'
+branding:
+  icon: 'upload-cloud'
+  color: 'blue'
