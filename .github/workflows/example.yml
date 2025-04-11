@@ -26,3 +26,4 @@ jobs:
         with:
           commit_message: "Update deployment status"
           file_pattern: .github/deployment-status.json
+          token: ${{ secrets.GITHUB_TOKEN_SECRET }}
