@@ -3,9 +3,6 @@
 name: Call CD Status Tracker Action
 
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
 
 jobs:
@@ -21,6 +18,5 @@ jobs:
       - name: Run CD Status Tracker
         uses: shundor/cd-status-tracker@main
         with:
-          # Pass any required inputs for the action here
-          input1: "value1"
-          input2: "value2"
+          environment: production
+          version: ${{ github.sha }}
